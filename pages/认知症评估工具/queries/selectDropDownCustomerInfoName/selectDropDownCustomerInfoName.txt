@@ -1,0 +1,5 @@
+    SELECT DISTINCT
+ s.id as value,s.`name` as label
+    FROM
+      crm_customer_info s
+

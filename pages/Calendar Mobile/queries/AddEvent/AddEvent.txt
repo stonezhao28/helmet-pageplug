@@ -1,0 +1,11 @@
+{
+	"start": {
+		"dateTime": "{{moment.tz(DatePicker1.selectedDate+" "+Table1.selectedRow.slot.split(" - ")[0], "DD/MM/YYYY HH:mm", timeZone.selectedOptionValue).toISOString()}}"
+	},
+	"end": {
+		"dateTime": "{{moment.tz(DatePicker1.selectedDate+" "+Table1.selectedRow.slot.split(" - ")[1], "DD/MM/YYYY HH:mm", timeZone.selectedOptionValue).toISOString()}}"
+	},
+	"description": {{JSON.stringify((purposeInput.text))}},
+	"summary": "{{nameInput.text + " Meeting with Rahul"}}",
+	"attendees": [{ "email": "templates@appsmith.com" }, { "email": "{{emailInput.text.trim()}}" }]
+}

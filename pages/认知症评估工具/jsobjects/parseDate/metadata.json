@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "parseDate",
+    "pageId": "认知症评估工具",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "认知症评估工具_parseDate",
+  "deleted": false,
+  "gitSyncId": "64faeccba746c16892a4d569_6501557e9f61e26bb9f89051"
+}

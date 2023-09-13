@@ -1,0 +1,40 @@
+    SELECT DISTINCT
+   s.id,s.`name`,s.age,s.gender_dict_id,s.email,s.mobile,s.`status`,s.del_flag,s.org_id,s.room_id,s.combination_level_dict_id,s.care_level_dict_id,s.create_by,s.create_time,
+      s.checkin_date ,
+      s.contract_end_date,
+      s.address,
+      (CASE s.`status` WHEN 0 THEN '未住' WHEN 1 THEN '已住' WHEN 2 THEN '退住' ELSE '未住' END) AS statusLabel,
+      ( SELECT so.name FROM `view_highblue-org_sys_org` so WHERE s.org_id = so.id and del_flag = 0 ) orgName,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.gender_dict_id AND d.type = 'gender' ) genderDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.care_level_dict_id AND d.type = 'care-level' ) careLevelDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.combination_level_dict_id AND d.type = 'combination-level' ) combinationLevelDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.idcard_type_dict_id AND d.type = 'idcard-type' ) idcardTypeDictLabel,
+      ( SELECT d.name FROM `highblue-dict`.sys_area d WHERE d.id = s.address_id AND d.del_flag = 0 ) addressName,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.nationality_dict_id AND d.type = 'nationality' ) nationalityDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.nation_dict_id AND d.type = 'nation' ) nationDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.religion_dict_id AND d.type = 'religion' ) religionDictLabel,
+      ( SELECT d.name FROM `highblue-dict`.sys_area d WHERE d.id = s.native_id AND d.del_flag = 0 ) nativeName,
+      ( SELECT d.name FROM `highblue-dict`.sys_area d WHERE d.id = s.census_address_id AND d.del_flag = 0 ) censusAddressName,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.degree_dict_id AND d.type = 'degree' ) degreeDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.marital_dict_id AND d.type = 'marital' ) maritalDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.medical_insurance_type_dict_id AND d.type = 'medical-insurance-type' ) medicalInsuranceTypeDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.political_dict_id AND d.type = 'political' ) politicalDictLabel,
+      ( SELECT d.label FROM `highblue-dict`.sys_dict d WHERE d.id = s.insurance_type_dict_id AND d.type = 'insurance-type' ) insuranceTypeDictLabel,
+      CONCAT_WS('-',( SELECT NAME FROM `view_highblue-space-space_info` WHERE id = vsi.parent_id AND type_dict_id = 16 ),( SELECT NAME FROM `view_highblue-space-space_info` WHERE id = s.room_id AND type_dict_id = 17 )) roomName,
+      ( SELECT so.name FROM `view_highblue-care-care_area` so WHERE so.id = vss.care_area_id) careAreaName,
+      ( SELECT so.name FROM crm_customer_contact_info so WHERE so.crm_customer_id = s.id and so.guardian_flag = 0 LIMIT 1) contactName,
+      ( SELECT so.mobile FROM crm_customer_contact_info so WHERE so.crm_customer_id = s.id and so.guardian_flag = 0 LIMIT 1) contactMobile,
+      CONCAT_WS(',',
+                ( SELECT name from `view_highblue-space-space_info` where FIND_IN_SET(id,get_parent_list(s.room_id)) and type_dict_id = 14),
+                ( SELECT name from `view_highblue-space-space_info` where FIND_IN_SET(id,get_parent_list(s.room_id)) and type_dict_id = 15),
+                ( SELECT name from `view_highblue-space-space_info` where FIND_IN_SET(id,get_parent_list(s.room_id)) and type_dict_id = 16),
+                ( SELECT NAME FROM `view_highblue-space-space_info` WHERE id = s.room_id AND type_dict_id = 17 )) roomFullName
+    FROM
+      crm_customer_tag cct,
+      crm_customer_info s
+    LEFT JOIN
+       `view_highblue-care-care_area_space` vss
+      on s.room_id = vss.space_id
+    left join `view_highblue-space-space_info` vsi
+      on s.room_id = vsi.id
+

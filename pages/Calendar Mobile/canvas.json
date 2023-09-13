@@ -1,0 +1,1018 @@
+{
+  "unpublishedPage": {
+    "name": "Calendar Mobile",
+    "slug": "calendar-mobile",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 450,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 960,
+          "containerStyle": "none",
+          "snapRows": 108,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 79,
+          "minHeight": 850,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "Modal1",
+              "topRow": 0,
+              "bottomRow": 0,
+              "parentRowSpace": 1,
+              "type": "MODAL_WIDGET",
+              "shouldScrollContents": true,
+              "parentColumnSpace": 1,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas1",
+                  "topRow": 0,
+                  "bottomRow": 600,
+                  "parentRowSpace": 1,
+                  "canExtend": true,
+                  "type": "CANVAS_WIDGET",
+                  "shouldScrollContents": false,
+                  "minHeight": 0,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text2",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "topRow": 2,
+                      "bottomRow": 6,
+                      "type": "TEXT_WIDGET",
+                      "dynamicTriggerPathList": [],
+                      "overflow": "SCROLL",
+                      "fontFamily": "System Default",
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "text": "Block  <b>{{Table1.selectedRow.slot}}</b>",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 42,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "ijo1z2grk8",
+                      "isVisible": true,
+                      "fontStyle": "",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "q50gzqfojb",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.5rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "labelTextSize": "0.875rem",
+                      "boxShadow": "none",
+                      "widgetName": "Button1",
+                      "rightColumn": 31,
+                      "onClick": "{{closeModal('Modal1')}}",
+                      "isDefaultClickDisabled": true,
+                      "buttonColor": "#2E3D49",
+                      "widgetId": "fd5rytrtl3",
+                      "topRow": 52,
+                      "bottomRow": 57,
+                      "isVisible": true,
+                      "type": "BUTTON_WIDGET",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "q50gzqfojb",
+                      "isLoading": false,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "0.375rem",
+                      "buttonVariant": "PRIMARY",
+                      "text": "Cancel",
+                      "isDisabled": false
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Button2",
+                      "onClick": "{{ AddEvent.run(() => ListEvents.run(() => { closeModal(\"Modal1\"); navigateTo(\"Meeting Details\", { eventId: AddEvent.data.id }) } ))}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        },
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
+                      "buttonColor": "#1E91E4",
+                      "topRow": 52,
+                      "bottomRow": 57,
+                      "type": "BUTTON_WIDGET",
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 32,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
+                      "googleRecaptchaKey": "",
+                      "text": "Confirm",
+                      "isDisabled": "{{!emailInput.isValid}}",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 62,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "jc9eq60y61",
+                      "isVisible": true,
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "q50gzqfojb",
+                      "isLoading": false,
+                      "borderRadius": "0.375rem",
+                      "buttonVariant": "PRIMARY"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text3",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "parentRowSpace": 40,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 30.75,
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [],
+                      "text": "Your Name",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 18,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "h5yappzz6r",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "q50gzqfojb",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text4",
+                      "topRow": 26,
+                      "bottomRow": 30,
+                      "parentRowSpace": 40,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 30.75,
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [],
+                      "text": "Meeting Purpose",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 25,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "o4zf20kzta",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "q50gzqfojb",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text5",
+                      "topRow": 17,
+                      "bottomRow": 21,
+                      "parentRowSpace": 40,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 30.75,
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [],
+                      "text": "Your Email",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 18,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "qm28kat8fb",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "q50gzqfojb",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "emailInput",
+                      "topRow": 21,
+                      "bottomRow": 25,
+                      "parentRowSpace": 40,
+                      "type": "INPUT_WIDGET",
+                      "parentColumnSpace": 30.75,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": false,
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "inputType": "EMAIL",
+                      "isDisabled": false,
+                      "validation": "true",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "rightColumn": 62,
+                      "widgetId": "lay329h995",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "errorMessage": "Enter a valid Email",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 1,
+                      "parentId": "q50gzqfojb",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "defaultText": ""
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Image2",
+                      "displayName": "Image",
+                      "iconSVG": "/static/media/icon.52d8fb96.svg",
+                      "topRow": 0,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "type": "IMAGE_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.4921875,
+                      "dynamicTriggerPathList": [],
+                      "imageShape": "RECTANGLE",
+                      "leftColumn": 49,
+                      "dynamicBindingPathList": [],
+                      "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+                      "key": "ejf5klu6ea",
+                      "labelTextSize": "0.875rem",
+                      "image": "https://i.ibb.co/FHrszZ3/3d-fluency-blue-paper-plane.png",
+                      "rightColumn": 64,
+                      "objectFit": "contain",
+                      "widgetId": "xbdohkvry0",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "q50gzqfojb",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "maxZoomLevel": 1,
+                      "enableDownload": false,
+                      "borderRadius": "0px",
+                      "enableRotation": false
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "nameInput",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "topRow": 13,
+                      "bottomRow": 17,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.4921875,
+                      "resetOnSubmit": true,
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "labelStyle": "",
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "key": "ga8hw7meqm",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "rightColumn": 62,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "8up32jp04k",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 2,
+                      "parentId": "q50gzqfojb",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "iconAlign": "left",
+                      "defaultText": "",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "purposeInput",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "topRow": 31,
+                      "bottomRow": 50,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.4921875,
+                      "resetOnSubmit": true,
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "labelStyle": "",
+                      "inputType": "MULTI_LINE_TEXT",
+                      "isDisabled": false,
+                      "key": "ga8hw7meqm",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "rightColumn": 63,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "ya3l20yi7p",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 2,
+                      "parentId": "q50gzqfojb",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "iconAlign": "left",
+                      "defaultText": "",
+                      "minDynamicHeight": 4
+                    }
+                  ],
+                  "isDisabled": false,
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "widgetId": "q50gzqfojb",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "lly0srevon",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                }
+              ],
+              "height": 600,
+              "labelTextSize": "0.875rem",
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
+              "widgetId": "lly0srevon",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "width": 532,
+              "minDynamicHeight": 4
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "backgroundColor": "#FFFFFF",
+              "widgetName": "Container1",
+              "rightColumn": 64,
+              "dynamicHeight": "FIXED",
+              "widgetId": "3j5sidzm1v",
+              "containerStyle": "card",
+              "topRow": 0,
+              "bottomRow": 96,
+              "parentRowSpace": 10,
+              "isVisible": true,
+              "type": "CONTAINER_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 6.78125,
+              "leftColumn": 0,
+              "borderRadius": "0px",
+              "children": [
+                {
+                  "labelTextSize": "0.875rem",
+                  "boxShadow": "none",
+                  "widgetName": "Canvas2",
+                  "rightColumn": 217,
+                  "detachFromLayout": true,
+                  "widgetId": "89bt22aobo",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 960,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "3j5sidzm1v",
+                  "minHeight": 890,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "borderRadius": "0px",
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text7",
+                      "topRow": 15,
+                      "bottomRow": 19,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 6.78125,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "text": "Meeting Time:",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 17,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "n8ylr0yi9y",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "89bt22aobo",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text8",
+                      "topRow": 19,
+                      "bottomRow": 23,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 6.78125,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "text": "Date:",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 17,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "ahxtkix0jh",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "89bt22aobo",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "timeZone",
+                      "isFilterable": true,
+                      "dynamicPropertyPathList": [],
+                      "topRow": 23,
+                      "bottomRow": 27,
+                      "parentRowSpace": 40,
+                      "type": "DROP_DOWN_WIDGET",
+                      "defaultOptionValue": "{{moment.tz.guess()}}",
+                      "parentColumnSpace": 74,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "options": "{{moment.tz.names().map((timezone) => { return {label: timezone, value: timezone }})}}",
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "rightColumn": 58,
+                      "widgetId": "zhdqjc7m4n",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 1,
+                      "parentId": "89bt22aobo",
+                      "isLoading": false,
+                      "borderRadius": "0px"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "durationDropdown",
+                      "isFilterable": true,
+                      "topRow": 15,
+                      "bottomRow": 19,
+                      "parentRowSpace": 40,
+                      "type": "DROP_DOWN_WIDGET",
+                      "defaultOptionValue": "15",
+                      "parentColumnSpace": 74,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "options": "[\n  {\n    \"label\": \"15 min Meeting\",\n    \"value\": \"15\"\n  },\n  {\n    \"label\": \"30 min Meeting\",\n    \"value\": \"30\"\n  },\n  {\n    \"label\": \"1 hour Meeting\",\n    \"value\": \"60\"\n  }\n]",
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "rightColumn": 44,
+                      "widgetId": "g8kanney8d",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 1,
+                      "parentId": "89bt22aobo",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "onOptionChange": ""
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "DatePicker1",
+                      "minDate": "30/05/2021",
+                      "dateFormat": "DD/MM/YYYY",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "defaultDate"
+                        },
+                        {
+                          "key": "onDateSelected"
+                        },
+                        {
+                          "key": "minDate"
+                        }
+                      ],
+                      "topRow": 19,
+                      "bottomRow": 23,
+                      "parentRowSpace": 40,
+                      "type": "DATE_PICKER_WIDGET",
+                      "parentColumnSpace": 74,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onDateSelected"
+                        }
+                      ],
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultDate"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "onDateSelected": "{{ListEvents.run()}}",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": true,
+                      "defaultDate": "{{moment().add(durationDropdown.selectedOptionValue, \"minutes\").hour() >= 23 ? moment().add(1,\"days\") .format(\"DD/MM/YYYY\") : appsmith.URL.queryParams.date ? moment(appsmith.URL.queryParams.date, \"DD-MM-YYYY\").format(\"DD/MM/YYYY\") : moment().format(\"DD/MM/YYYY\")}}",
+                      "rightColumn": 44,
+                      "widgetId": "8acfr7xhmr",
+                      "isVisible": true,
+                      "datePickerType": "DATE_PICKER",
+                      "label": "",
+                      "version": 1,
+                      "parentId": "89bt22aobo",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDate": "31/05/2032"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Table1",
+                      "columnOrder": [
+                        "slot",
+                        "customColumn1"
+                      ],
+                      "isVisibleDownload": false,
+                      "topRow": 28,
+                      "bottomRow": 94,
+                      "parentRowSpace": 10,
+                      "isSortable": true,
+                      "type": "TABLE_WIDGET",
+                      "parentColumnSpace": 74,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.slot.computedValue"
+                        },
+                        {
+                          "key": "derivedColumns.customColumn1.menuButtonLabel"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.menuButtonLabel"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "primaryColumns": {
+                        "customColumn1": {
+                          "columnType": "button",
+                          "isDerived": true,
+                          "onClick": "{{showModal('Modal1')}}",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.customColumn1))}}",
+                          "width": 150,
+                          "id": "customColumn1",
+                          "label": "Schedule",
+                          "isVisible": true,
+                          "buttonLabelColor": "#FFFFFF",
+                          "buttonLabel": "Schedule",
+                          "horizontalAlignment": "CENTER",
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "buttonColor": "#2E3D49",
+                          "buttonVariant": "PRIMARY",
+                          "iconName": "",
+                          "menuButtonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
+                          "cellBackground": "#FFFFFF",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "slot": {
+                          "isDerived": false,
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.slot))}}",
+                          "textSize": "1rem",
+                          "index": 0,
+                          "isVisible": true,
+                          "label": "Time Slot",
+                          "fontStyle": "REGULAR,BOLD",
+                          "columnType": "text",
+                          "horizontalAlignment": "CENTER",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "slot",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "cellBackground": "#FFFFFF",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "delimiter": ",",
+                      "columnActions": [
+                        {
+                          "actionPayloads": [],
+                          "label": "Schedule",
+                          "id": "2ty92diso2",
+                          "dynamicTrigger": "{{showModal('Modal1')}}"
+                        }
+                      ],
+                      "defaultSearchText": "",
+                      "migrated": true,
+                      "derivedColumns": {
+                        "customColumn1": {
+                          "columnType": "button",
+                          "isDerived": true,
+                          "onClick": "{{showModal('Modal1')}}",
+                          "computedValue": "",
+                          "buttonStyle": "#29CCA3",
+                          "width": 150,
+                          "id": "customColumn1",
+                          "label": "Schedule",
+                          "isVisible": true,
+                          "buttonLabelColor": "#FFFFFF",
+                          "buttonLabel": "Schedule",
+                          "horizontalAlignment": "CENTER",
+                          "buttonColor": "#2E3D49",
+                          "menuButtonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
+                          "cellBackground": "#FFFFFF",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "textSize": "0.875rem",
+                      "widgetId": "zereqs32ms",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": false,
+                      "tableData": "{{\nfunction() {\n  let bookings = ListEvents.data.items;\n\tlet bookingIndex = 0;\n  const startHour = 10;\n\tconst endHour = 23;\n  let startingTime = moment(DatePicker1.selectedDate, \"DD/MM/YYYY\").tz(\"Asia/Kolkata\");\n  let endingTime = moment(DatePicker1.selectedDate, \"DD/MM/YYYY\").tz(\"Asia/Kolkata\");\n  startingTime.hour(startHour);\n  startingTime.minutes(0);\n  endingTime.hour(endHour);\n  endingTime.minutes(0);\n  endingTime.seconds(0);\n  let slots = [];\n  const slotDuration = Number(durationDropdown.selectedOptionValue);\n  console.log(\"Scheduler starting \",startingTime.toISOString());\n  while(startingTime.isBefore(endingTime)) {\n  if (startingTime.isBefore(moment().tz(\"Asia/Kolkata\"))) {\n\t  startingTime = moment().tz(\"Asia/Kolkata\");\n\t  if (startingTime.minutes() > 30) { \n\t    startingTime.minutes(0); \n\t    startingTime.hour(startingTime.hour() + 1); \n\t  } else \n\t    startingTime.minutes(30);\n\t  console.log(\"Scheduler set to nearest hour \" + startingTime.hour());\n  }\n  let booking = bookings[bookingIndex];\n  let bookingStart = undefined; \n  if (booking) {\n  \tbookingStart = moment(booking.start.dateTime).tz(\"Asia/Kolkata\");\n    while(bookingStart.isBefore(startingTime)) {\n      console.log(\"Scheduler booking is before starttime\", booking,bookingStart.toISOString(), startingTime.toISOString());\n      bookingIndex += 1;\n      booking = bookings[bookingIndex];\n      if (booking === undefined) {\n        bookingStart.hour(endHour);\n        break;\n      }\n      bookingStart = moment(booking.start.dateTime).tz(\"Asia/Kolkata\");\n      \n    } \n  } else { \n    console.log(\"Scheduler Default\");\t\n    bookingStart = moment(DatePicker1.selectedDate, \"DD/MM/YYYY\").tz(\"Asia/Kolkata\");\n    bookingStart.hour(endHour);\n    bookingStart.minutes(0);\n    bookingStart.seconds(0);\n\t}\n  console.log(\"Scheduler starts \" + startingTime.format(\"DD-MM-YYYY HH:mm\") + \" end \" + bookingStart.format(\"DD-MM-YYYY HH:mm\"));\n  const slotNum = Math.floor(Math.round(moment.duration(bookingStart.diff(startingTime)).asMinutes()) / slotDuration);\n  console.log(\"Scheduler Slot num \" + slotNum);\n  for(let i = 0; i < slotNum; i++) {\n    const slotStartTime = startingTime.tz(timeZone.selectedOptionValue).format(\"HH:mm\");\n    startingTime.add(slotDuration, \"minutes\");\n    const slotEndTime = startingTime.tz(timeZone.selectedOptionValue).format(\"HH:mm\");\n    console.log(\"Scheduler \" + slotStartTime);\n    slots.push({ startTime: slotStartTime, endTime: slotEndTime });\n    startingTime = startingTime.tz(\"Asia/Kolkata\");\n  }\n  console.log(\"Scheduler had booking\", booking);\n    startingTime = booking ? moment(booking.end.dateTime).tz(\"Asia/Kolkata\") : startingTime.hour(endHour);\n  \tbookingIndex+=1;\n  \tconsole.log(\"Scheduler next start \" + startingTime.tz(\"Asia/Kolkata\").format(\"DD-MM-YYYY HH:mm\") + \"-\" + endingTime.format(\"DD-MM-YYYY HH:mm\"))\n  }\nreturn slots.map((slot) => { return { slot: slot.startTime + \" - \" + slot.endTime } })\n}()\n}}",
+                      "isVisible": true,
+                      "label": "Data",
+                      "searchKey": "",
+                      "fontStyle": "REGULAR",
+                      "version": 3,
+                      "parentId": "89bt22aobo",
+                      "serverSidePaginationEnabled": true,
+                      "isLoading": false,
+                      "isVisibleCompactMode": false,
+                      "horizontalAlignment": "CENTER",
+                      "isVisibleSearch": false,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "0px",
+                      "isVisiblePagination": false,
+                      "cellBackground": "#FFFFFF",
+                      "columnSizeMap": {
+                        "slot": 192
+                      },
+                      "verticalAlignment": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Container2",
+                      "borderColor": "transparent",
+                      "isCanvas": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "displayName": "Container",
+                      "iconSVG": "/static/media/icon.1977dca3.svg",
+                      "topRow": 0,
+                      "bottomRow": 14,
+                      "parentRowSpace": 10,
+                      "type": "CONTAINER_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.53125,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "children": [
+                        {
+                          "boxShadow": "none",
+                          "widgetName": "Canvas3",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 140,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": false,
+                          "hideCard": true,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "leftColumn": 0,
+                          "children": [
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Text1",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
+                              "topRow": 1,
+                              "bottomRow": 12,
+                              "parentRowSpace": 40,
+                              "type": "TEXT_WIDGET",
+                              "parentColumnSpace": 74,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "text"
+                                }
+                              ],
+                              "text": "{{Table1.tableData.length === 0 ? \"No Free Slots Today!\" : \"Book time with \".concat(ListEvents.data.summary).concat( \" via  Appsmith\")}}",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 50,
+                              "textAlign": "LEFT",
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "5moushaqss",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "version": 1,
+                              "textColor": "#2E3D49",
+                              "parentId": "347484p028",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "maxDynamicHeight": 9000,
+                              "fontSize": "1.5rem",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Image1",
+                              "dynamicPropertyPathList": [],
+                              "topRow": 1,
+                              "bottomRow": 11,
+                              "parentRowSpace": 10,
+                              "type": "IMAGE_WIDGET",
+                              "parentColumnSpace": 6.78125,
+                              "dynamicTriggerPathList": [],
+                              "imageShape": "RECTANGLE",
+                              "leftColumn": 50,
+                              "dynamicBindingPathList": [],
+                              "defaultImage": "",
+                              "labelTextSize": "0.875rem",
+                              "image": "https://i.ibb.co/0tyD9gR/3d-fluency-calendar-1.png",
+                              "rightColumn": 64,
+                              "objectFit": "cover",
+                              "widgetId": "zub29q278k",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "347484p028",
+                              "isLoading": false,
+                              "maxZoomLevel": 1,
+                              "borderRadius": "0px"
+                            }
+                          ],
+                          "key": "4kt2p07nkh",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 156.75,
+                          "detachFromLayout": true,
+                          "widgetId": "347484p028",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "6lqi9tk6hk",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
+                        }
+                      ],
+                      "borderWidth": "0",
+                      "key": "xnp2dfq7lh",
+                      "labelTextSize": "0.875rem",
+                      "backgroundColor": "#D7F7FF",
+                      "rightColumn": 64,
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "6lqi9tk6hk",
+                      "containerStyle": "card",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "89bt22aobo",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "15\npx",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text9",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 23,
+                      "bottomRow": 27,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "parentColumnSpace": 6.53125,
+                      "dynamicTriggerPathList": [],
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Time Zone",
+                      "key": "35bbqwhey0",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 18,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "bkedra183n",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "89bt22aobo",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
+                    }
+                  ]
+                }
+              ],
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 4
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Calendar Mobile_ListEvents",
+              "name": "ListEvents",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "moment(DatePicker1.selectedDate, \"DD/MM/YYYY\").add(1,\"day\").format(\"YYYY-MM-DDT00:mm:ssZ\")",
+                "moment(DatePicker1.selectedDate, \"DD/MM/YYYY\").format(\"YYYY-MM-DDT00:mm:ssZ\")"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Calendar Mobile",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "64faeccba746c16892a4d569_64ffe7e929dd5b16a15aedb5"
+}
